@@ -1,2 +1,4 @@
 # No need to republish the entirety of Frankenstein, and other books
 /books
+
+__pycache__/
