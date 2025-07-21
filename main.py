@@ -1,4 +1,5 @@
 from stats import get_word_count, get_characters_count
+import sys
 
 
 def sort_on(dictionary):
@@ -11,7 +12,11 @@ def get_book_contents(book_path):
 
 def main():
 
-    book = "books/frankenstein.txt"
+    if not len(sys.argv) == 2:
+        print("Usage: python3 main.py <path_to_book>")
+        sys.exit(1)
+
+    book = sys.argv[1]
     book_contents = get_book_contents(book)
 
     print("============ BOOKBOT ============")
